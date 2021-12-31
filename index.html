@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&family=Staatliches&display=swap"
+      rel="stylesheet"
+    />
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="men">
+      <header>
+        <!-- Основна навігація всередині <header> -->
+
+        <ul class="menu_list">
+          <li id="logo_list">
+            <a href=""><h1 class="logo">Cables</h1></a>
+          </li>
+         
+          <li>
+            <input
+              type="text"
+              id="mySearch"
+              placeholder="Search.."
+              title="Search"
+            />
+          </li>
+         
+         
+        </ul>
+      </header>
+      <!-- Сайдбар -->
+
+      <!-- Вміст сторінки -->
+    </div>
+    <div class="sidebarColor">
+      <div class="f">
+        <div class="sidebar">
+          <div class="sidebar_text">
+            <h1 class="manage_plants">Manage cables</h1>
+            <h1 class="buy_mode">Buy mode</h1>
+            <label class="switch" >
+              <input type="checkbox" id="check3" onchange="showPlus(this)"/>
+              <span class="slider round"></span>
+            </label>
+            <p class="sort">Sort by price: low to high</p>
+            <label class="switch" >
+              <input type="checkbox" id="check1" onchange="sortLowApply(this)"/>
+              <span class="slider round"></span>
+            </label><br>
+            <p class="sort">Sort by price: high to low</p>
+            <label class="switch" >
+              <input type="checkbox" id="check2" onchange="SortHighApply(this)"/>
+              <span class="slider round"></span>
+            </label>
+            <p class="cart_header">Cart:</p>
+            <p class="total_price"></p>
+          </div>
+        </div>
+        <!-- Карти -->
+        <section class="plants">
+          <div class="wrapper plant">
+            <div class="cards">
+              <div class="card" data-price="17" rating="1">
+                <img src="img/type-c-full.jpg" id="typeCfull" class="cable" alt="" />
+                <div class="card_container">
+                  <p class="prod_text">usb-c charge cable</p>
+                  <div class="card-info">
+                    <p  class="prod_price">$17.00</p>
+                    <div class="plus1" id="plus1" >+</div>
+                  </div>
+                </div>
+              </div>
+              <div class="card"" data-price="21" rating="2">
+                <img src="img/usb-lightning.jpg" id="usbLightning" class="cable" alt="" />
+                <div class="card_container">
+                  <p class="prod_text">lightning to usb cable</p>
+                  <div class="card-info">
+                    <p  class="prod_price">$21.00</p>
+                    <div class="plus1" id="plus2" >+</div>
+                  </div>
+                </div>
+              </div>
+              <div class="card" data-price="19" rating="3">
+                <img src="img/type-c-lightning.jpg" id="typeClightning" class="cable" alt="" />
+                <div class="card_container">
+                  <p class="prod_text">usb-c to lightning cable</p>
+                  <div class="card-info">
+                    <p  class="prod_price">$19.00</p>
+                    <div class="plus1" id="plus3" >+</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card" data-price="29" rating="4">
+                <img src="img/watch-usb.jpg" id="watchUsb" class="cable" alt="" />
+                <div class="card_container">
+                  <p class="prod_text">apple watch to usb-c cable</p>
+                  <div class="card-info">
+                    <p  class="prod_price">$29.00</p>
+                    <div class="plus1" id="plus4" >+</div>
+                  </div>
+                </div>
+              </div>
+              <div class="card" data-price="49" rating="5">
+                <img src="img/macbook-type-c.jpg" id="macbookTypeC" class="cable" alt="" />
+                <div class="card_container">
+                  <p class="prod_text">usb-c to magsafe 3 cable</p>
+                  <div class="card-info">
+                    <p  class="prod_price">$49.00</p>
+                    <div class="plus1" id="plus5" >+</div>
+                  </div>
+                </div>
+              </div>
+              <div class="card" data-price="10" rating="6">
+                <img src="img/type-c-black.jpg" id="typecBlack" class="cable" alt="" />
+                <div class="card_container">
+                  <p class="prod_text">type-c - type-c</p>
+                  <div class="card-info">
+                    <p  class="prod_price">$10.00</p>
+                    <div class="plus1" id="plus6" ">+</div>
+                  </div>
+                </div>
+              </div>
+              <div class="card" data-price="20" rating="7">
+                <img src="img/type-c-thunderbolt.jpg" id="typecThunderbolt" class="cable" alt="" />
+                <div class="card_container">
+                  <p class="prod_text">type-c - thundebolt</p>
+                  <div class="card-info">
+                    <p  class="prod_price">$20.00</p>
+                    <div class="plus1" id="plus7" >+</div>
+                  </div>
+                </div>
+              </div>
+              <div class="card" data-price="25" rating="8">
+                <img src="img/type-c-thunderbolt.jpg" id="typecThunderbolt2" class="cable" alt="" />
+                <div class="card_container">
+                  <p class="prod_text">type-c - thundebolt 2m</p>
+                  <div class="card-info">
+                    <p  class="prod_price">$25.00</p>
+                    <div class="plus1" id="plus8" >+</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- CART!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
+            <div class="cart">
+              <div class="card_cart" id="card_cart_1" data-price="17" >
+                <img src="img/type-c-full.jpg" class="cable_cart" alt="" />
+                <div class="card_container_cart">
+                  <p class="prod_text_cart">usb-c charge cable</p>
+                  <div class="card-info">
+                    <p  class="prod_price_cart" id="price1">$17.00</p>
+                    <div class="plus1 minus1" id="minus1" >-</div>
+                  </div> 
+                  <div class="items counter-wrapper">
+                    <div class="items__control" data-action="minus" >-</div>
+                    <div class="items__current" id="c1" data-counter>1</div>
+                    <div class="items__control" data-action="plus">+</div>
+                  </div>
+                </div>
+              </div>
+              <div class="card_cart" id="card_cart_2" data-price="21" >
+                <img src="img/usb-lightning.jpg" class="cable_cart" alt="" />
+                <div class="card_container_cart">
+                  <p class="prod_text_cart">lightning to usb cable</p>
+                  <div class="card-info">
+                    <p  class="prod_price_cart">$21.00</p>
+                    <div class="plus1 minus1" id="minus2" >-</div>
+                  </div>
+                  <div class="items counter-wrapper">
+                    <div class="items__control" data-action="minus">-</div>
+                    <div class="items__current" id="c2" data-counter>1</div>
+                    <div class="items__control" data-action="plus">+</div>
+                  </div>
+                </div>
+              </div>
+              <div class="card_cart" id="card_cart_3" data-price="19" >
+                <img src="img/type-c-lightning.jpg" class="cable_cart" alt="" />
+                <div class="card_container_cart">
+                  <p class="prod_text_cart">usb-c to lightning cable</p>
+                  <div class="card-info">
+                    <p  class="prod_price_cart">$19.00</p>
+                    <div class="plus1 minus1" id="minus3" >-</div>
+                  </div>
+                  <div class="items counter-wrapper">
+                    <div class="items__control" data-action="minus">-</div>
+                    <div class="items__current" id="c3" data-counter>1</div>
+                    <div class="items__control" data-action="plus">+</div>
+                  </div>
+                </div>
+              </div>
+              <div class="card_cart" id="card_cart_4" data-price="29" >
+                <img src="img/watch-usb.jpg" class="cable_cart" alt="" />
+                <div class="card_container_cart">
+                  <p class="prod_text_cart">apple watch to usb-c cable</p>
+                  <div class="card-info">
+                    <p  class="prod_price_cart" data-price="29">$29.00</p>
+                    <div class="plus1 minus1" id="minus4" >-</div>
+                  </div>
+                  <div class="items counter-wrapper">
+                    <div class="items__control" data-action="minus">-</div>
+                    <div class="items__current" id="c4" data-counter>1</div>
+                    <div class="items__control" data-action="plus">+</div>
+                  </div>
+                </div>
+              </div>
+              <div class="card_cart" id="card_cart_5" data-price="49" >
+                <img src="img/macbook-type-c.jpg" class="cable_cart" alt="" />
+                <div class="card_container_cart">
+                  <p class="prod_text_cart">usb-c to magsafe 3 cable</p>
+                  <div class="card-info">
+                    <p  class="prod_price_cart">$49.00</p>
+                    <div class="plus1 minus1" id="minus5" >-</div>
+                  </div>
+                  <div class="items counter-wrapper">
+                    <div class="items__control" data-action="minus">-</div>
+                    <div class="items__current" id="c5" data-counter>1</div>
+                    <div class="items__control" data-action="plus">+</div>
+                  </div>
+                </div>
+              </div>
+              <div class="card_cart" id="card_cart_6" data-price="10" >
+                <img src="img/type-c-black.jpg" class="cable_cart" alt="" />
+                <div class="card_container_cart">
+                  <p class="prod_text_cart">type-c - type-c</p>
+                  <div class="card-info">
+                    <p  class="prod_price_cart">$10.00</p>
+                    <div class="plus1 minus1" id="minus6" ">-</div>
+                  </div>
+                  <div class="items counter-wrapper">
+                    <div class="items__control" data-action="minus">-</div>
+                    <div class="items__current" id="c6" data-counter>1</div>
+                    <div class="items__control" data-action="plus">+</div>
+                  </div>
+                </div>
+              </div>
+              <div class="card_cart" id="card_cart_7" data-price="20" >
+                <img src="img/type-c-thunderbolt.jpg" class="cable_cart" alt="" />
+                <div class="card_container_cart">
+                  <p class="prod_text_cart">type-c - thundebolt</p>
+                  <div class="card-info">
+                    <p  class="prod_price_cart">$20.00</p>
+                    <div class="plus1 minus1" id="minus7" >-</div>
+                  </div>
+                  <div class="items counter-wrapper">
+                    <div class="items__control" data-action="minus">-</div>
+                    <div class="items__current" id="c7" data-counter>1</div>
+                    <div class="items__control" data-action="plus">+</div>
+                  </div>
+                </div>
+              </div>
+              <div class="card_cart" id="card_cart_8" data-price="25" >
+                <img src="img/type-c-thunderbolt.jpg" class="cable_cart" alt="" />
+                <div class="card_container_cart">
+                  <p class="prod_text_cart">type-c - thundebolt 2m</p>
+                  <div class="card-info">
+                    <p  class="prod_price_cart">$25.00</p>
+                    <div class="plus1 minus1" id="minus8" >-</div>
+                  </div>
+                  <div class="items counter-wrapper">
+                    <div class="items__control" data-action="minus">-</div>
+                    <div class="items__current" id="c8" data-counter>1</div>
+                    <div class="items__control" data-action="plus">+</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+              
+        </div>
+      </div>
+           
+          
+          
+        </section>
+        
+
+    <script src="script.js"></script>
+  </body>
+</html>
